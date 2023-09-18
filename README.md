@@ -10,8 +10,8 @@ This script takes a reference sequence in file GenBank format and plasmidsaurus 
 
 # Mutation Annotations
 
-**Substitution; AA change:** A->T; Proline -> Valine \
+**Substitution; AA change:** A->T; Pro -> Val \
 **Substitution; Silent mutaiton:** A->T; Silent \
-**Frameshift; Deletion:** A-> - ; Proline -> Deletion \
-**Frameshift; Insertion:** - -> T; Insertion -> Valine 
+**Frameshift; Deletion:** A-> - ; Pro -> Deletion \
+**Frameshift; Insertion:** - -> T; Insertion -> Val 
 

@@ -13,6 +13,6 @@ This script takes a reference sequence in file GenBank format and plasmidsaurus 
 
 **Substitution; AA change:** A->T; Proline -> Valine \
 **Substitution; Silent mutaiton:** A->T; Silent \
-**Frameshift; Deletion:** A-> - ; Proline -> Deletion \ 
-**Frameshift; Insertion:** - -> T; Insertion -> Valine \  
+**Frameshift; Deletion:** A-> - ; Proline -> Deletion \
+**Frameshift; Insertion:** - -> T; Insertion -> Valine 
 

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-#usage: analyze_plasmidsaurus.py "reference_genome.dna" "plasmidsaurus.gbk" "library_name"
+#usage: analyze_plasmidsaurus.py "reference_genome.gbk" "plasmidsaurus.gbk" "library_name"
 
 
 
@@ -286,56 +286,23 @@ if len(ref_g) - len(plasmid_g) < 50:
     for f, b in zip(zp, filtered_aa_coord):
         if 'Deletion' in f[1]:
             add_feature(b, b, new_plasmid_record, 'color: #ee10ec')
-
-            # my_feature_location2= FeatureLocation(b, b )
-            #
-            # my_feature_type2 = "misc_feature"
-            #
-            # my_feature2 = SeqFeature(my_feature_location2,type=my_feature_type2,qualifiers={'label':[f], 'note':['pLannotate','color: #ee10ec']})
-            #
-            # new_plasmid_record.features.append(my_feature2)
+            
         elif 'Insertion' in f[1]:
 
             add_feature(b, b+1, new_plasmid_record, 'color: #ecee10')
 
-
-            # my_feature_location2= FeatureLocation(b, b+1 )
-            #
-            # my_feature_type2 = "misc_feature"
-            #
-            # my_feature2 = SeqFeature(my_feature_location2,type=my_feature_type2,qualifiers={'label':[f], 'note':['pLannotate','color: #ecee10']})
-            #
-            # new_plasmid_record.features.append(my_feature2)
         else:
 
             add_feature(b, b+1, new_plasmid_record, 'color: #ff0000')
-
-            # my_feature_location2= FeatureLocation(b, b+1 )
-            #
-            # my_feature_type2 = "misc_feature"
-            #
-            # my_feature2 = SeqFeature(my_feature_location2,type=my_feature_type2,qualifiers={'label':[f], 'note':['pLannotate','color: #ff0000']})
-            #
-            # new_plasmid_record.features.append(my_feature2)
 
 #adds features for large frameshift
     for start_pos, end_pos, lable in zip(s, e, frameshift_lable):
         if 'Deletion' in lable:
             add_feature(start_pos, start_pos, new_plasmid_record, 'color: #ee10ec')
-
-
-            #
-            # my_feature_location3 = FeatureLocation(start_pos,start_pos)
-            # my_feature_type3 = "misc_feature"
-            # my_feature3 = SeqFeature(my_feature_location3,type=my_feature_type3,qualifiers={'label': lable, 'note':['pLannotate','color: #ee10ec']})
-            # new_plasmid_record.features.append(my_feature3)
         else:
             add_feature(start_pos, end_pos, new_plasmid_record, 'color: #ecee10')
 
-            # my_feature_location3 = FeatureLocation(start_pos,end_pos)
-            # my_feature_type3 = "misc_feature"
-            # my_feature3 = SeqFeature(my_feature_location3,type=my_feature_type3,qualifiers={'label': lable, 'note':['pLannotate','color: #ecee10']})
-            # new_plasmid_record.features.append(my_feature3)
+
 
     file_name = file_name[0].replace('pLann',"")
     output_file = open(file_name+lib_name + '.gbk', 'w')

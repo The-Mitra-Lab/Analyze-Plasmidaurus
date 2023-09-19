@@ -18,3 +18,10 @@ This script takes a reference sequence in file GenBank format and plasmidsaurus 
 
 ## Script Usage 
 
+**To annotate a single GenBank file use:** \
+python3 analyze_plasmidsaurus.py reference.gbk plasmidsaurus.gbk clone_name 
+
+**To annotate multiple GenBank files use:** \
+for FILE in directory\*.gbk; do python3 analyze_plasmidsaurus.py directory\reference.gbk $FILE clone_name;Done 
+
+

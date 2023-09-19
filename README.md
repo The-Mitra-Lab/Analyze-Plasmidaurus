@@ -29,7 +29,7 @@ for FILE in directory\*.gbk; do python3 analyze_plasmidsaurus.py directory\refer
 **To count mutations in annotated GenBank file use:** \
 python3 count_mutations.py annotated_file.gbk clone_name library_name 
 
-**To count mutations in annotated multiple GenBank (in same library) file use:**
+**To count mutations in annotated multiple GenBank (in same library) file use:**    \
 for FILE in directory\*annotated.gbk; do python3 count count_mutations.py $FILE;Done 
 
 
